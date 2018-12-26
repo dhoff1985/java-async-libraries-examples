@@ -11,5 +11,8 @@ dependencies {
   apt 'org.projectlombok:lombok:1.18.4'
   compile 'org.projectlombok:lombok:1.18.4'
   compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.15'
+  
+  testCompile group: 'cglib', name: 'cglib-nodep', version: '3.2.10'
+  testCompile group: 'org.objenesis', name: 'objenesis', version: '3.0.1'
   testCompile group: 'org.spockframework', name: 'spock-core', version: '1.2-groovy-2.4'
 }

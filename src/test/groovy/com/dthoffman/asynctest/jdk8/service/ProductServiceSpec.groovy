@@ -1,9 +1,10 @@
-package com.dthoffman.aysnctest.jdk8
+package com.dthoffman.asynctest.jdk8.service
 
-import com.dthoffman.asynctest.jdk8.PriceService
-import com.dthoffman.asynctest.jdk8.ProductInformationService
-import com.dthoffman.asynctest.jdk8.ProductService
-import com.dthoffman.asynctest.jdk8.RatingsService
+import com.dthoffman.asynctest.jdk8.client.PriceClient
+import com.dthoffman.asynctest.jdk8.client.ProductInformationClient
+import com.dthoffman.asynctest.jdk8.service.ProductService
+import com.dthoffman.asynctest.jdk8.client.RatingsClient
+import com.dthoffman.asynctest.jdk8.client.SearchClient
 import com.dthoffman.asynctest.jdk8.domain.HandleAbleFailure
 import com.dthoffman.asynctest.jdk8.domain.Product
 import com.dthoffman.asynctest.jdk8.domain.UnhandleAbleFailure
@@ -20,9 +21,9 @@ import static java.util.concurrent.CompletableFuture.failedFuture
 class ProductServiceSpec extends Specification {
 
 
-  ProductInformationService mockInfoService = Mock(ProductInformationService)
-  RatingsService mockRatingsService = Mock(RatingsService)
-  PriceService mockPriceService = Mock(PriceService)
+  ProductInformationClient mockInfoService = Mock(ProductInformationClient)
+  RatingsClient mockRatingsService = Mock(RatingsClient)
+  PriceClient mockPriceService = Mock(PriceClient)
 
   ProductService productService = new ProductService(mockPriceService, mockInfoService, mockRatingsService)
 
