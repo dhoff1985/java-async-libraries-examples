@@ -4,7 +4,6 @@ in each of the following async libraries
 * jdk8
 * rx-java
 * reactor
-* reactivex
 * kotlin coroutines
 
 ### Task List
